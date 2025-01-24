@@ -1,4 +1,4 @@
-# CALCULATOR README
+# CALCULATOR
 
 ## Overview
 
@@ -67,7 +67,7 @@ Contributions are welcome! If you would like to contribute to the CALCULATOR pro
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE]([LICENSE](https://github.com/Ashokkpal/CALCULATOR/blob/main/License)) file for details.
 
 ## Acknowledgments
 
