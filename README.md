@@ -1,4 +1,4 @@
-# CALCULATOR
+# CALCULATOR #
 
 ## Overview
 
