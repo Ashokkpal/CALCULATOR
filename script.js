@@ -1,16 +1,21 @@
-// script.js
-function appendValue(value) {
-    document.getElementById('display').value += value;
+let display = document.getElementById('display');
+
+function appendCharacter(char) {
+    display.value += char;
 }
 
 function clearDisplay() {
-    document.getElementById('display').value = '';
+    display.value = '';
+}
+
+function deleteLast() {
+    display.value = display.value.slice(0, -1);
 }
 
 function calculateResult() {
     try {
-        document.getElementById('display').value = eval(document.getElementById('display').value);
-    } catch (e) {
-        alert('Invalid Expression');
+        display.value = eval(display.value);
+    } catch (error) {
+        display.value = 'Error';
     }
 }
