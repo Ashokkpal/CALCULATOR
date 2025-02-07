@@ -7,53 +7,55 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+    <header>
         <h1>Calculator</h1>
+    </header>
 
-        <img src="https://raw.githubusercontent.com/Ashokkpal/ashokkpal.github.io/main/images/ashokk.jpg" 
-             alt="Ashok Pal" class="profile-pic">
-        
-        <h2>Created by Ashok Pal</h2>
-        <p>B.Tech | Software Engineering | Cybersecurity Enthusiast</p>
-        
-        <p>Follow me on: 
-            <a href="https://github.com/Ashokkpal" target="_blank">GitHub</a> | 
-            <a href="https://www.instagram.com/its_ashookk/" target="_blank">Instagram</a> | 
-            <a href="https://www.linkedin.com/in/yoursashok/" target="_blank">LinkedIn</a>
-        </p>
+    <section class="content">
+        <div class="calculator-container">
+            <h2>Created by Ashok Pal</h2>
+            <p>B.Tech | Software Engineer | Cybersecurity Enthusiast</p>
 
-        <div class="calculator">
-            <input type="text" id="display" readonly>
-            <div class="buttons">
-                <button class="operator" onclick="clearDisplay()">C</button>
-                <button class="operator" onclick="appendCharacter('/')">/</button>
-                <button class="operator" onclick="appendCharacter('*')">*</button>
-                <button class="operator" onclick="deleteLast()">⌫</button>
+            <div class="calculator">
+                <input type="text" id="display" readonly>
+                <div class="buttons">
+                    <button class="operator" onclick="clearDisplay()">C</button>
+                    <button class="operator" onclick="appendCharacter('/')">/</button>
+                    <button class="operator" onclick="appendCharacter('*')">*</button>
+                    <button class="operator" onclick="deleteLast()">⌫</button>
 
-                <button onclick="appendCharacter('7')">7</button>
-                <button onclick="appendCharacter('8')">8</button>
-                <button onclick="appendCharacter('9')">9</button>
-                <button class="operator" onclick="appendCharacter('-')">-</button>
+                    <button onclick="appendCharacter('7')">7</button>
+                    <button onclick="appendCharacter('8')">8</button>
+                    <button onclick="appendCharacter('9')">9</button>
+                    <button class="operator" onclick="appendCharacter('-')">-</button>
 
-                <button onclick="appendCharacter('4')">4</button>
-                <button onclick="appendCharacter('5')">5</button>
-                <button onclick="appendCharacter('6')">6</button>
-                <button class="operator" onclick="appendCharacter('+')">+</button>
+                    <button onclick="appendCharacter('4')">4</button>
+                    <button onclick="appendCharacter('5')">5</button>
+                    <button onclick="appendCharacter('6')">6</button>
+                    <button class="operator" onclick="appendCharacter('+')">+</button>
 
-                <button onclick="appendCharacter('1')">1</button>
-                <button onclick="appendCharacter('2')">2</button>
-                <button onclick="appendCharacter('3')">3</button>
-                <button class="equal" onclick="calculateResult()">=</button>
+                    <button onclick="appendCharacter('1')">1</button>
+                    <button onclick="appendCharacter('2')">2</button>
+                    <button onclick="appendCharacter('3')">3</button>
+                    <button class="equal" onclick="calculateResult()">=</button>
 
-                <button onclick="appendCharacter('0')" class="zero">0</button>
-                <button onclick="appendCharacter('.')">.</button>
+                    <button onclick="appendCharacter('0')" class="zero">0</button>
+                    <button onclick="appendCharacter('.')">.</button>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <p>Follow me on:</p>
+                <a href="https://github.com/Ashokkpal" target="_blank">GitHub</a> |
+                <a href="https://www.instagram.com/its_ashookk/" target="_blank">Instagram</a> |
+                <a href="https://www.linkedin.com/in/yoursashok/" target="_blank">LinkedIn</a>
             </div>
         </div>
+    </section>
 
-        <footer>
-            <p>© 2025 Ashok Pal. All Rights Reserved.</p>
-        </footer>
-    </div>
+    <footer>
+        <p>© 2025 Ashok Pal. All Rights Reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
