@@ -18,18 +18,10 @@
             text-shadow: 3px 3px 10px rgba(255, 215, 0, 0.5);
         }
 
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-top: 20px;
-            box-shadow: 2px 2px 10px rgba(255, 215, 0, 0.5);
-        }
-
         .calculator {
             background: #222222;
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 15px;
             max-width: 350px;
             margin: auto;
             box-shadow: 2px 2px 10px rgba(255, 215, 0, 0.5);
@@ -58,7 +50,7 @@
             height: 60px;
             font-size: 1.5em;
             border: none;
-            border-radius: 10px;
+            border-radius: 15px;  /* Rounded buttons */
             background: #FFD700;
             color: #222222;
             cursor: pointer;
@@ -89,41 +81,11 @@
             grid-column: span 2;
         }
 
-        .social-links a {
-            color: #FFD700;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .social-links a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            margin-top: 30px;
-            font-size: 14px;
-            color: #FFD700;
-        }
-
-        footer a {
-            color: #FFD700;
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
 
     <h1>🧮 Calculator</h1>
-    <img src="https://raw.githubusercontent.com/Ashokkpal/ashokkpal.github.io/main/images/ashokk.jpg" 
-         alt="Ashok Pal" class="profile-pic">
-    <h2>Created by Ashok Pal</h2>
-    <p>B.Tech | Software Engineering | Cybersecurity Enthusiast</p>
-    
-    <p>Follow me on: 
-        <a href="https://github.com/Ashokkpal" target="_blank">GitHub</a> | 
-        <a href="https://www.instagram.com/its_ashookk/" target="_blank">Instagram</a> | 
-        <a href="https://www.linkedin.com/in/yoursashok/" target="_blank">LinkedIn</a>
-    </p>
 
     <div class="calculator">
         <input type="text" id="display" readonly>
@@ -153,12 +115,6 @@
         </div>
     </div>
 
-    <footer>
-        <p>🔥 Also check out my <a href="https://ashokkpal.github.io/stone-paper-scissors/" target="_blank">Stone-Paper-Scissors Game</a></p>
-        <p>Connect with me on <a href="https://github.com/Ashokkpal" target="_blank">GitHub</a></p>
-        <p>© 2025 Ashok Pal. All Rights Reserved.</p>
-    </footer>
-
     <script>
         function clearDisplay() {
             document.getElementById("display").value = '';
@@ -181,6 +137,21 @@
                 display.value = "Error";
             }
         }
+
+        // 🎯 Listen for keyboard input (Laptop & Mobile Keyboard Support)
+        document.addEventListener("keydown", function(event) {
+            let key = event.key;
+            
+            if (/\d/.test(key) || key === '.' || key === '+' || key === '-' || key === '*' || key === '/') {
+                appendCharacter(key);
+            } else if (key === 'Enter') {
+                calculateResult();
+            } else if (key === 'Backspace') {
+                deleteLast();
+            } else if (key === 'Escape') {
+                clearDisplay();
+            }
+        });
     </script>
 
 </body>
